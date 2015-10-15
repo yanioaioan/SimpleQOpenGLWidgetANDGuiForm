@@ -6,10 +6,12 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
-    setWindowTitle ("Collision Detection and Response");
+
     ui->setupUi(this);
     m_gl=new NGLScene();
     ui->gridLayout->addWidget (m_gl,0,0,2,1);
+
+    this->setWindowTitle("SimpleQOpenGLWidgetANDGuiForm");
 
     //manual signal-slot connection
     connect(ui->pushButton, SIGNAL(clicked(bool)),  m_gl, SLOT(testButtonClicked(bool)) );
