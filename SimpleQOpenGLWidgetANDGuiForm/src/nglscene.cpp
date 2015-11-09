@@ -24,7 +24,6 @@ int fps=0;
 NGLScene::NGLScene()
 {
     setFocusPolicy(Qt::StrongFocus);//to make the keyevents respond
-//     this->resize(_parent->size ());
 
     // re-size the widget to that of the parent (in this case the GLFrame passed in on construction)
     m_rotate=false;

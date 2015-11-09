@@ -1,18 +1,17 @@
-TARGET+=SimpleQOpenGLWidgetANDGuiForm
 QT += core gui opengl
 QT += widgets
 
 TEMPLATE = app
-
-SOURCES += src/*.cpp \
+CONFIG +=c++11
+SOURCES += src/*.cpp
 
 FORMS += \
     mainwindow.ui
 
-HEADERS += include/*.h \
+HEADERS += include/*.h
 
 OBJECTS_DIR+=obj
-
+CONFIG +=c++11
 LIBS += -L/$(HOME)/NGL/lib -l NGL
 INCLUDEPATH += $$(HOME)/NGL/include/
 INCLUDEPATH +=$$PWD/include
