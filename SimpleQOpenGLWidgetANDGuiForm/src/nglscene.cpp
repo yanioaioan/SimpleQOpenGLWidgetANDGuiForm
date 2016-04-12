@@ -154,6 +154,9 @@ void NGLScene::testButtonClicked(bool b)
     std::cout<<"Button Clicked - manual signal-slot connection"<<std::endl;
 
     update ();
+
+    QImage image=QOpenGLWidget::grabFramebuffer();
+    image.save("image.png");
 }
 
 
@@ -270,6 +273,12 @@ void NGLScene::keyPressEvent(QKeyEvent *_event)
 //  case Qt::Key_Down  : m_plane->tilt(-1.0,1,0); break;
 //  case Qt::Key_Left  : m_plane->tilt(-1.0,0,1); break;
 //  case Qt::Key_Right : m_plane->tilt(1.0,0,1); break;
+  case Qt::Key_S :
+  {
+      QImage image=QOpenGLWidget::grabFramebuffer();
+      image.save("image.png");
+  }
+      break;
   default : break;
   }
   // finally update the GLWindow and re-draw

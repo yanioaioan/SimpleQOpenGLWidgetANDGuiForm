@@ -27,4 +27,7 @@ void MainWindow::on_pushButton_clicked()
     //auto signal-slot connection
     std::cout<<"Button Clicked - auto signal-slot connection"<<std::endl;
     m_gl->update();
+
+//    QImage image=m_gl->grabFramebuffer();
+//    image.save("image.png");
 }
