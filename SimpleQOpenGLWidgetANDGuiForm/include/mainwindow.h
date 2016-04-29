@@ -19,6 +19,10 @@ public:
 private slots:
     void on_pushButton_clicked();
 
+    void on_doubleSpinBox_3_valueChanged(double arg1);
+
+    void on_doubleSpinBox_2_editingFinished();
+
 private:
     Ui::MainWindow *ui;
     /// @brief our openGL widget

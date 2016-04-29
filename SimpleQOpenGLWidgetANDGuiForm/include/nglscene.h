@@ -21,6 +21,9 @@ public:
     NGLScene();
     ~NGLScene();
 
+    void printsmth();
+
+
 
 protected:
     void initializeGL ();
@@ -96,11 +99,13 @@ private:
 
 
 
+
+
 signals:
-    void clicked(bool);
+    void clicked(/*bool*/);
 
 public slots:
-  void testButtonClicked(bool);
+  void testButtonClicked();
 
 
 };

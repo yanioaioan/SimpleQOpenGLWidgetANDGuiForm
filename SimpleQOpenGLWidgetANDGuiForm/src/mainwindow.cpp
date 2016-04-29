@@ -14,7 +14,7 @@ MainWindow::MainWindow(QWidget *parent) :
     this->setWindowTitle("SimpleQOpenGLWidgetANDGuiForm");
 
     //manual signal-slot connection
-    connect(ui->pushButton, SIGNAL(clicked(bool)),  m_gl, SLOT(testButtonClicked(bool)) );
+    connect(ui->pushButton, SIGNAL(clicked(bool)),  m_gl, SLOT(testButtonClicked()) );
 }
 
 MainWindow::~MainWindow()
@@ -30,4 +30,14 @@ void MainWindow::on_pushButton_clicked()
 
 //    QImage image=m_gl->grabFramebuffer();
 //    image.save("image.png");
+}
+
+void MainWindow::on_doubleSpinBox_3_valueChanged(double arg1)
+{
+    m_gl->printsmth();
+}
+
+void MainWindow::on_doubleSpinBox_2_editingFinished()
+{
+
 }

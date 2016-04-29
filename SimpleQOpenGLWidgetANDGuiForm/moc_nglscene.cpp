@@ -53,16 +53,16 @@ static const uint qt_meta_data_NGLScene[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   24,    2, 0x06 /* Public */,
+       1,    0,   24,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       3,    1,   27,    2, 0x0a /* Public */,
+       3,    0,   25,    2, 0x0a /* Public */,
 
  // signals: parameters
-    QMetaType::Void, QMetaType::Bool,    2,
+    QMetaType::Void,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::Bool,    2,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -73,20 +73,21 @@ void NGLScene::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         NGLScene *_t = static_cast<NGLScene *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->clicked((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 1: _t->testButtonClicked((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 0: _t->clicked(); break;
+        case 1: _t->testButtonClicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         void **func = reinterpret_cast<void **>(_a[1]);
         {
-            typedef void (NGLScene::*_t)(bool );
+            typedef void (NGLScene::*_t)();
             if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&NGLScene::clicked)) {
                 *result = 0;
             }
         }
     }
+    Q_UNUSED(_a);
 }
 
 const QMetaObject NGLScene::staticMetaObject = {
@@ -126,9 +127,8 @@ int NGLScene::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void NGLScene::clicked(bool _t1)
+void NGLScene::clicked()
 {
-    void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
-    QMetaObject::activate(this, &staticMetaObject, 0, _a);
+    QMetaObject::activate(this, &staticMetaObject, 0, Q_NULLPTR);
 }
 QT_END_MOC_NAMESPACE

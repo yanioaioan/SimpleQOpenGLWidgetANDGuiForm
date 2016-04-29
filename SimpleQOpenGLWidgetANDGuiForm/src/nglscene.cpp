@@ -147,10 +147,15 @@ void NGLScene::paintGL ()
         m_frames++;
 }
 
-
-void NGLScene::testButtonClicked(bool b)
+void NGLScene::printsmth()
 {
-    emit clicked (b);
+    std::cout<<"prints"<<std::endl;
+}
+
+
+void NGLScene::testButtonClicked(/*bool b*/)
+{
+    emit clicked (/*b*/);
     std::cout<<"Button Clicked - manual signal-slot connection"<<std::endl;
 
     update ();
